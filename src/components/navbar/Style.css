@@ -1,0 +1,30 @@
+.nav{
+    background-color: #1d262d;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+.ancres{
+    display: flex;
+    gap: 10px;
+}
+
+.inp{
+    margin-right: 10px;
+}
+
+.inp .input{
+    padding: 0.5em 0.75em;
+    border-radius: 0.2em;
+    border: 1px solid var(--c-border, currentColor);
+    color: var(--c-text);
+    font-size: 1rem;
+    letter-spacing: 0.1ch;
+    width: 240px;
+}
