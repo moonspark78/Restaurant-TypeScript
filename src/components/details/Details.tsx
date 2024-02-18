@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Logo from "../../../public/logo192.png"
 
 
 
@@ -6,6 +7,8 @@ type Plats = {
     id: number;
     name: string;
     image: string;
+    ingredients: string[];
+    instructions: string[];
 }
 
 export const Details = () => {
@@ -26,12 +29,25 @@ export const Details = () => {
     <div>
         <h2>Details</h2>
         <div>
-            <div className='imga'>
-                <h4></h4>
+            <div className='name-imge'>
+                <h4>Plat: Pizza</h4>
+                <img src={Logo} alt="" />
             </div>
-            <div className='ingre'></div>
+            <div className='ingredients'>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+            </div>
         </div>
-        <div className='instru'></div>
+        <div className='instructions'>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+        </div>
     </div>
   )
 }
