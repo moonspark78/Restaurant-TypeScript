@@ -28,7 +28,7 @@ export const Main = () => {
         <div className='cards'>
             {
                 plats.map((plat) => (
-                    <div>
+                    <div key={plat.id}>
                         <img src={plat.image} alt="" />
                         <p>{plat.name}</p>
                     </div>
