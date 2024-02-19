@@ -23,7 +23,7 @@ export const Main = () => {
     },[])
 
   return (
-    <div className='wrapper'>
+    <div className='apper'>
         <h2>Les plats</h2>
         <div className='cards'>
             {

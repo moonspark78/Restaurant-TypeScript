@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import logo from "../../logo192.png"
-import "./Style.css"
+import "./Dstyle.css"
 
 
 
