@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Logo from "../../../public/logo192.png"
+import logo from "../../logo192.png"
+import "./Style.css"
 
 
 
@@ -27,11 +28,11 @@ export const Details = () => {
     },[])
   return (
     <div>
-        <h2>Details</h2>
-        <div>
+        <h2 style={{textDecoration: "underline"}}>Details</h2>
+        <div className='wrapper'>
             <div className='name-imge'>
-                <h4>Plat: Pizza</h4>
-                <img src={Logo} alt="" />
+                <h4 style={{textDecoration: "underline"}}>Plat: Pizza</h4>
+                <img src={logo} alt="" />
             </div>
             <div className='ingredients'>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
