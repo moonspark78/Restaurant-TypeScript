@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import logo from "../../logo192.png"
 import "./Dstyle.css"
+import {PlatsTypes} from "../../models/PlatsTypes"
 
 
 
-type Plats = {
-    id: number;
-    name: string;
-    image: string;
-    ingredients: string[];
-    instructions: string[];
-}
+
 
 export const Details = () => {
 
-    const [details, setDetails] = useState<Plats[]>([])
+    const [details, setDetails] = useState<PlatsTypes[]>([])
 
     useEffect(() => {
         const fetchData = async () => {

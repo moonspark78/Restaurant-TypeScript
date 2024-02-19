@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 export const AccueilRestaurant = () => {
   return (
       <Router>
+        
         <div>
           <Navbar/>
               <Routes>

@@ -1,4 +1,4 @@
-export type Plats = {
+export type PlatsTypes = {
     id: number;
     name: string;
     image: string;

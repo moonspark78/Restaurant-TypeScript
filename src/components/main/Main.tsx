@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import "./Style.css"
+import {PlatsTypes} from "../../models/PlatsTypes"
 
 
-type Plats = {
-    id: number;
-    name: string;
-    image: string;
-}
+
 export const Main = () => {
 
-    const [plats, setPlats] = useState<Plats[]>([])
+    const [plats, setPlats] = useState<PlatsTypes[]>([])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,7 +24,7 @@ export const Main = () => {
         <h2>Les plats</h2>
         <div className='cards'>
             {
-                plats.map((plat) => (
+                plats.map((plat: PlatsTypes) => (
                     <div key={plat.id}>
                         <img src={plat.image} alt="" />
                         <p>{plat.name}</p>
