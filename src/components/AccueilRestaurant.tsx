@@ -16,7 +16,7 @@ export const AccueilRestaurant = () => {
           <Navbar/>
               <Routes>
                 <Route path='/' element={<Main/>}/>
-                <Route path='/details' element={<Details/>}/>
+                <Route path='/details/:id' element={<Details/>}/>
               </Routes>
         </div>
         </PlatsProvider>

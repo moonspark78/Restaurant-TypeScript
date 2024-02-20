@@ -14,6 +14,17 @@ export const Details = () => {
     const {plats} = usePlatsContext();
     const {id} = useParams();
 
+     // Recherche du plat correspondant à l'ID dans le contexte
+     const plat = plats.find(plat => plat.id.toString() === id?.toString());
+
+
+     // Si le plat n'est pas trouvé, retourner un message d'erreur ou une redirection
+     if (!plat) {
+         return <div>Plat non trouvé</div>;
+     }
+ 
+
+
 
     
   return (
@@ -22,22 +33,22 @@ export const Details = () => {
         <div className='wrapper'>
             <div className='name-imge'>
                 <h4 style={{textDecoration: "underline"}}>Plat: Pizza</h4>
-                <img src={logo} alt="" />
+                <img src={plat.image} alt="" />
             </div>
             <div className='ingredients'>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                    <ul>
+                        {plat.ingredients.map((ingredient, index) => (
+                            <li key={index}>{ingredient}</li>
+                        ))}
+                    </ul>
             </div>
         </div>
         <div className='instructions'>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, vitae.</p>
+                    <ul>
+                        {plat.instructions.map((instruction, index) => (
+                            <li key={index}>{instruction}</li>
+                        ))}
+                    </ul>
         </div>
     </div>
   )
