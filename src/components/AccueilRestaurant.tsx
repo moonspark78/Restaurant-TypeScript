@@ -3,6 +3,7 @@ import { Navbar } from './navbar/Navbar'
 import {Main} from './main/Main'
 import { Details } from './details/Details'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { PlatsProvider} from '../context/PlatsContext';
 
 /* https://dummyjson.com/recipes */
 
@@ -10,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 export const AccueilRestaurant = () => {
   return (
       <Router>
-        
+        <PlatsProvider>
         <div>
           <Navbar/>
               <Routes>
@@ -18,6 +19,7 @@ export const AccueilRestaurant = () => {
                 <Route path='/details' element={<Details/>}/>
               </Routes>
         </div>
+        </PlatsProvider>
       </Router>
   )
 }

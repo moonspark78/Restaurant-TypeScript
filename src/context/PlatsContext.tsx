@@ -7,9 +7,13 @@ interface PlatsContextType {
     setPlats: React.Dispatch<React.SetStateAction<PlatsTypes[]>>;
 }
 
+const defaultValue: PlatsContextType = {
+    plats: [],
+    setPlats: () => {}
+};
 
 
-export const PlatsContext = createContext<PlatsContextType | undefined>(undefined);
+export const PlatsContext = createContext<PlatsContextType>(defaultValue);
 export const usePlatsContext = () => useContext(PlatsContext);
 
 

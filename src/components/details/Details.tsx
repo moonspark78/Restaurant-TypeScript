@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import logo from "../../logo192.png"
 import "./Dstyle.css"
 import {PlatsTypes} from "../../models/PlatsTypes"
+import { useParams } from 'react-router-dom'
+import { usePlatsContext } from '../../context/PlatsContext'
 
 
 
@@ -9,18 +11,11 @@ import {PlatsTypes} from "../../models/PlatsTypes"
 
 export const Details = () => {
 
-    const [details, setDetails] = useState<PlatsTypes[]>([])
+    const {plats} = usePlatsContext();
+    const {id} = useParams();
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch("https://dummyjson.com/recipes");
-            const data = await response.json();
-            console.log(data.recipes);
-            setDetails(data.recipes);
-            
-        };
-        fetchData();
-    },[])
+
+    
   return (
     <div>
         <h2 style={{textDecoration: "underline"}}>Details</h2>

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import "./Style.css"
 import {PlatsTypes} from "../../models/PlatsTypes"
+import {usePlatsContext} from "../../context/PlatsContext"
+import { Link } from 'react-router-dom'
 
 
 
 export const Main = () => {
 
-    const [plats, setPlats] = useState<PlatsTypes[]>([])
+    const {plats, setPlats} = usePlatsContext()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,10 +27,12 @@ export const Main = () => {
         <div className='cards'>
             {
                 plats.map((plat: PlatsTypes) => (
+                    <Link to={`/details/${plat.id}`}>
                     <div key={plat.id}>
                         <img src={plat.image} alt="" />
                         <p>{plat.name}</p>
                     </div>
+                    </Link>
                 ))
             }
         </div>
